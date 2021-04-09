@@ -10,24 +10,26 @@ namespace Exercise_13_14_15
             while (repeat)
             {
                 //Exercise 13
-                Console.WriteLine("Exercise 13 \nPlease enter a whole number!");
+                Console.WriteLine("Exercise 13 \nPlease enter a positive whole number!");
 
                 int number;
 
 
                 string input = Console.ReadLine();
                 bool inputParse = int.TryParse(input, out number);
-                if (!inputParse)
+                if (!inputParse || number < 0)
                 {
-                    Console.WriteLine("Please enter whole numbers only!");
+                    Console.WriteLine("Please enter positive whole numbers only!");
                 }
 
                 //for loop
-                for (int i = 1; i <= number + 1; i++)
+                if (inputParse)
                 {
-                    Console.WriteLine($"{number + 1 - i}");
+                    for (int i = 1; i <= number + 1; i++)
+                    {
+                        Console.WriteLine($"{number + 1 - i}");
+                    }
                 }
- 
                 //continue?
                 bool conLoop = true;
                 while (conLoop)
@@ -59,21 +61,23 @@ namespace Exercise_13_14_15
             bool repeat2 = true;
             while (repeat2)
             {
-                Console.WriteLine("Exercise 14 \nPlease enter a whole number!");
+                Console.WriteLine("Exercise 14 \nPlease enter a positive whole number!");
                 int number2;
                 string input2 = Console.ReadLine();
                 bool inputParse2 = int.TryParse(input2, out number2);
-                if (!inputParse2)
+                if (!inputParse2 || number2 < 0)
                 {
-                    Console.WriteLine("Please enter whole numbers only!");
+                    Console.WriteLine("Please enter positive whole numbers only!");
                 }
 
                 //for loop
-                for (int o = 1; o <= number2; o++)
+                if (inputParse2)
                 {
-                    Console.WriteLine($"{o * o}");
+                    for (int o = 1; o <= number2; o++)
+                    {
+                        Console.WriteLine($"{o * o}");
+                    }
                 }
-
                 //continue?
                 bool conLoop2 = true;
                 while (conLoop2)
@@ -105,21 +109,23 @@ namespace Exercise_13_14_15
             bool repeat3 = true;
             while (repeat3)
             {
-                Console.WriteLine("Exercise 15 \nPlease enter a whole number!");
+                Console.WriteLine("Exercise 15 \nPlease enter a positive whole number!");
                 int number3;
                 string input3 = Console.ReadLine();
                 bool inputParse3 = int.TryParse(input3, out number3);
-                if (!inputParse3)
+                if (!inputParse3 || number3 < 0)
                 {
-                    Console.WriteLine("Please enter whole numbers only!");
+                    Console.WriteLine("Please enter positive whole numbers only!");
                 }
 
                 //for loop
-                for (int p = 1; p <= number3; p++)
+                if (inputParse3)
                 {
-                    Console.WriteLine($"{p * p * p}");
+                    for (int p = 1; p <= number3; p++)
+                    {
+                        Console.WriteLine($"{p * p * p}");
+                    }
                 }
-
                 //continue?
                 bool conLoop3 = true;
                 while (conLoop3)
